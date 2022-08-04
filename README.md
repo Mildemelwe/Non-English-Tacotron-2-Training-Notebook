@@ -5,4 +5,11 @@ This notebook is meant to provide easier access to training Tacotron 2 models in
 # Supported audio
 Audio for training should be 16-bit 22050hz mono WAV files. Do not include spaces in filenames. Files should only include alphanumerics (half-width), dashes, and underscores. This means no Japanese or Chinese filenames, or diacritics. Audio clips should be 10 seconds or less to facilitate learning. Based on my tests, I recommend having at least 15 minutes of audio.
 # Transcriptions
-The transcription file should be a text document with each line having the following format: `wavs/{name_of_file}.wav|{text}`.
+The transcription file should be a text document with each line having the following format: `wavs/{name_of_file}.wav|{text}`. Use one of the included G2Ps to convert the transcription to the appropriate phonetic input.
+# Training
+The steps in the notebook should be rather self-explanitory, I hope. Upload your audio into the wavs/ folder before starting training. Here are some notes to keep in mind:
+- Batch size should ideally be a factor of the amount of wavs you have. For example, when training a model with 15 wavs I set the batch size to 5.
+- If you have the T4 GPU on Colab, do not set the batch size higher than 14.
+- Output directory for training should be in Google Drive in case you get disconnected.
+- As you train, checkpoints will build up. Delete old ones and empty trash to keep your drive storage available.
+- Stop training when you get to an appropriate validation loss. For example, what I do is: less than 30 files = under 0.07; 30-100 files = under 0.09; 150+ files = under 0.1; more than 30 minutes of data = under 0.14
