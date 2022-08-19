@@ -13,3 +13,11 @@ The steps in the notebook should be rather self-explanitory, I hope. Upload your
 - Output directory for training should be in Google Drive in case you get disconnected.
 - As you train, checkpoints will build up. Delete old ones and empty trash to keep your drive storage available.
 - Stop training when you get to an appropriate validation loss. For example, what I do is: less than 30 files = under 0.07; 30-100 files = under 0.09; 150+ files = under 0.1; more than 30 minutes of data = under 0.14
+# Attributions
+- TALQu phonetic system by Haruqa (https://booth.pm/ja/items/2755336)
+- neuTalk Japanese phonetic system by neutrogic (https://github.com/neutrogic/neuTalk)
+- TALQu pretrained model by Haruqa (https://github.com/Haruqa/tacotron2/releases)
+- neuTalk Japanese and Mandarin pretrained models by neutrogic (https://github.com/neutrogic/neuTalk)
+- French pretrained model created by Mildemelwe and trained by neutrogic (https://github.com/neutrogic)
+- Some code formatting from the Uberduck Tacotron 2 training notebook (https://colab.research.google.com/drive/1WTilMdm9Vf7KE79gzkeeTBigAN6iv3Bg?usp=sharing)
+- Tacotron 2 implementation by NVIDIA (https://github.com/NVIDIA/tacotron2)
